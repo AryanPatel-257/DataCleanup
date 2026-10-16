@@ -1,0 +1,5 @@
+[15:04:38] LINE 0004: Validation Failure: [Corporate Email Violation: Malformed structural email format: 'malformed-email_domain.com'] 
+[15:04:38] LINE 0005: Validation Failure: [Corporate Email Violation: Duplicate constraint violation. Data entry 'aryan.patel@logistics.in' already logged in history columns.] 
+[15:04:38] LINE 0006: Validation Failure: [Date of Birth Violation: Date string '1994-18-19' does not conform to standard parsing formats.] 
+[15:04:38] LINE 0007: Validation Failure: [CTC Compensation Violation: Value 'Free' could not be compiled into a valid decimal point digit.] 
+[15:04:38] LINE 0008: Validation Failure: [Vehicle Reg Number Violation: Duplicate constraint violation. Data entry 'GJ03AA1234' already logged in history columns.] 
