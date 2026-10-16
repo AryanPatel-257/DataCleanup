@@ -1,0 +1,57 @@
+{
+  "ClientName": "Enterprise Logistics Corp",
+  "TargetDatabase": {
+    "ConnectionString": "Server=localhost;Database=ClientAnalyticsDB;Trusted_Connection=True;",
+    "DestinationTable": "DimPersonnelRegistry"
+  },
+  "MatrixSettings": {
+    "DefaultCurrency": "INR",
+    "DateFormat": "yyyy-MM-dd"
+  },
+  "Columns": [
+    {
+      "ExcelColumnHeader": "Full Name",
+      "DatabaseColumnName": "EmployeeName",
+      "DataType": "String",
+      "IsRequired": true,
+      "ValidationRules": {}
+    },
+    {
+      "ExcelColumnHeader": "Corporate Email",
+      "DatabaseColumnName": "CleanEmail",
+      "DataType": "Email",
+      "IsRequired": true,
+      "ValidationRules": {
+        "RegexPattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+        "PreventDuplicates": true
+      }
+    },
+    {
+      "ExcelColumnHeader": "Date of Birth",
+      "DatabaseColumnName": "DOB",
+      "DataType": "DateTime",
+      "IsRequired": true,
+      "ValidationRules": {}
+    },
+    {
+      "ExcelColumnHeader": "CTC Compensation",
+      "DatabaseColumnName": "AnnualSalary",
+      "DataType": "Decimal",
+      "IsRequired": true,
+      "ValidationRules": {
+        "MinValue": 0.00,
+        "StripCurrencySymbols": ["$", "₹", ","]
+      }
+    },
+    {
+      "ExcelColumnHeader": "Vehicle Reg Number",
+      "DatabaseColumnName": "VehicleNumber",
+      "DataType": "String",
+      "IsRequired": false,
+      "ValidationRules": {
+        "RegexPattern": "^[A-Z]{2}\\d{2}[A-Z]{1,2}\\d{4}$",
+        "PreventDuplicates": true
+      }
+    }
+  ]
+}
